@@ -10,9 +10,8 @@ Los sistemas dinámicos son sistemas que evolucionan con el tiempo, y su comport
 >🔑 *Sistema Dinámico:* Un sistema dinámico es un conjunto de reglas que describen cómo un punto en el espacio de estados evoluciona con el tiempo. Puede ser descrito por ecuaciones diferenciales (tiempo continuo) o ecuaciones en diferencias (tiempo discreto).
 
 💡**Ejemplo 1:** Un péndulo simple es un sistema dinámico continuo, modelado por la ecuación diferencial:
-$$
-\frac{d^2\theta}{dt^2} + \frac{g}{L}\sin(\theta) = 0
-$$
+
+$$\frac{d^2\theta}{dt^2} + \frac{g}{L}\sin(\theta) = 0$$
 
 ### 1.2. Clasificación de Sistemas Dinámicos
 - **Sistemas Lineales vs No Lineales**: Los sistemas lineales satisfacen el principio de superposición, mientras que los no lineales no.
@@ -25,15 +24,14 @@ La Transformada de Laplace es una herramienta matemática que convierte ecuacion
 
 ### 2.1. Definición de la Transformada de Laplace
 >🔑 *Transformada de Laplace:* La Transformada de Laplace de una función \( f(t) \) se define como:
-$$
-F(s) = \mathcal{L}\{f(t)\} = \int_{0}^{\infty} f(t) e^{-st} \, dt
-$$
+
+$$F(s) = \mathcal{L}\{f(t)\} = \int_{0}^{\infty} f(t) e^{-st} \, dt$$
+
 donde \( s \) es un número complejo.
 
 💡**Ejemplo 2:** La Transformada de Laplace de \( f(t) = e^{at} \) es:
-$$
-\mathcal{L}\{e^{at}\} = \frac{1}{s - a}
-$$
+
+$$\mathcal{L}\{e^{at}\} = \frac{1}{s - a}$$
 
 ### 2.2. Propiedades de la Transformada de Laplace
 - **Linealidad**: \( \mathcal{L}\{a f(t) + b g(t)\} = a F(s) + b G(s) \).
@@ -49,32 +47,29 @@ La Transformada de Laplace es fundamental para el análisis de sistemas dinámic
 Los sistemas dinámicos en tiempo continuo se modelan mediante ecuaciones diferenciales. La Transformada de Laplace convierte estas ecuaciones en el dominio de \( s \), donde se pueden manipular algebraicamente.
 
 💡**Ejemplo 3:** Un sistema masa-resorte-amortiguador se modela con la ecuación diferencial:
-$$
-m\frac{d^2x}{dt^2} + c\frac{dx}{dt} + kx = F(t)
-$$
+
+$$m\frac{d^2x}{dt^2} + c\frac{dx}{dt} + kx = F(t)$$
+
 Aplicando la Transformada de Laplace, obtenemos:
-$$
-m s^2 X(s) + c s X(s) + k X(s) = F(s)
-$$
+
+$$m s^2 X(s) + c s X(s) + k X(s) = F(s)$$
 
 ### 3.2. Función de Transferencia
 >🔑 *Función de Transferencia:* La función de transferencia \( H(s) \) es la relación entre la Transformada de Laplace de la salida \( Y(s) \) y la entrada \( X(s) \):
-$$
-H(s) = \frac{Y(s)}{X(s)}
-$$
+
+$$H(s) = \frac{Y(s)}{X(s)}$$
 
 💡**Ejemplo 4:** Para el sistema masa-resorte-amortiguador, la función de transferencia es:
-$$
-H(s) = \frac{X(s)}{F(s)} = \frac{1}{m s^2 + c s + k}
-$$
+
+$$H(s) = \frac{X(s)}{F(s)} = \frac{1}{m s^2 + c s + k}$$
 
 ### 3.3. Estabilidad de Sistemas
 La Transformada de Laplace permite analizar la estabilidad de un sistema dinámico mediante el estudio de los polos de la función de transferencia. Un sistema es estable si todos los polos de \( H(s) \) tienen parte real negativa.
 
 💡**Ejemplo 5:** Para el sistema con función de transferencia:
-$$
-H(s) = \frac{1}{s^2 + 3s + 2}
-$$
+
+$$H(s) = \frac{1}{s^2 + 3s + 2}$$
+
 Los polos son \( s = -1 \) y \( s = -2 \). Como ambos tienen parte real negativa, el sistema es estable.
 
 ---
@@ -86,23 +81,22 @@ La Transformada de Laplace tiene aplicaciones clave en el análisis y diseño de
 La Transformada de Laplace permite calcular la respuesta temporal de un sistema a una entrada dada. Esto es útil para analizar el comportamiento transitorio y estacionario del sistema.
 
 💡**Ejemplo 6:** Calcular la respuesta al escalón unitario de un sistema con función de transferencia:
-$$
-H(s) = \frac{1}{s + 1}
-$$
+
+$$H(s) = \frac{1}{s + 1}$$
+
 La respuesta en el tiempo es:
-$$
-y(t) = \mathcal{L}^{-1}\left\{\frac{1}{s(s + 1)}\right\} = 1 - e^{-t}
-$$
+
+$$y(t) = \mathcal{L}^{-1}{\frac{1}{s(s + 1)}} = 1 - e^{-t}$$
 
 ### 4.2. Control de Sistemas
 En ingeniería de control, la Transformada de Laplace se utiliza para diseñar controladores que aseguren la estabilidad y el rendimiento deseado de un sistema dinámico.
 
 💡**Ejemplo 7:** Diseñar un controlador PID para un sistema con función de transferencia:
-$$
-H(s) = \frac{1}{s^2 + 2s + 1}
-$$
+
+$$H(s) = \frac{1}{s^2 + 2s + 1}$$
 
 ### 4.3. Análisis de Circuitos Eléctricos
+
 En circuitos eléctricos, la Transformada de Laplace se utiliza para resolver ecuaciones diferenciales que describen el comportamiento de voltajes y corrientes.
 
 💡**Ejemplo 8:** Analizar un circuito RLC en serie utilizando la Transformada de Laplace.
