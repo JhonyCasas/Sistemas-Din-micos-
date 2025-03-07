@@ -43,19 +43,18 @@ Consideremos el polinomio cuadrático \( s^2 + 4s + 5 \):
    - \( b = 4 \)
    - \( c = 5 \)
 2. Calculamos el discriminante:
-   $$
-   \Delta = b^2 - 4ac = 4^2 - 4(1)(5) = 16 - 20 = -4
-   $$
-3. Como \( \Delta < 0 \), el polinomio es irreducible.
+
+   $$\Delta = b^2 - 4ac = 4^2 - 4(1)(5) = 16 - 20 = -4$$
+   
+4. Como \( \Delta < 0 \), el polinomio es irreducible.
 
 ---
 
 ## 4. Métodos de Expansión
 
 Cuando el denominador tiene factores cuadráticos irreducibles, la expansión en fracciones parciales sigue la forma:
-$$
-\frac{P(s)}{(s^2 + as + b) Q(s)} = \frac{As + B}{s^2 + as + b} + \text{(términos para otros factores)}
-$$
+
+$$\frac{P(s)}{(s^2 + as + b) Q(s)} = \frac{As + B}{s^2 + as + b} + \text{(términos para otros factores)}$$
 
 ### 4.1. Pasos para la Expansión
 1. **Identificar los factores cuadráticos irreducibles** en el denominador.
@@ -69,59 +68,54 @@ $$
 
 ### 5.1. Problema
 Descomponer la siguiente fracción en fracciones parciales:
-$$
-F(s) = \frac{2s^2 + 3s + 4}{(s^2 + 2s + 5)(s + 1)}
-$$
+
+$$F(s) = \frac{2s^2 + 3s + 4}{(s^2 + 2s + 5)(s + 1)}$$
 
 ### 5.2. Solución
 1. **Identificar el factor cuadrático irreducible**:
    El denominador \( s^2 + 2s + 5 \) es irreducible porque su discriminante es negativo (\( b^2 - 4ac = 4 - 20 = -16 \)).
 
 2. **Expansión en fracciones parciales**:
-   $$
-   \frac{2s^2 + 3s + 4}{(s^2 + 2s + 5)(s + 1)} = \frac{As + B}{s^2 + 2s + 5} + \frac{C}{s + 1}
-   $$
+3. 
+   $$\frac{2s^2 + 3s + 4}{(s^2 + 2s + 5)(s + 1)} = \frac{As + B}{s^2 + 2s + 5} + \frac{C}{s + 1}$$
 
-3. **Multiplicar ambos lados por el denominador común**:
-   $$
-   2s^2 + 3s + 4 = (As + B)(s + 1) + C(s^2 + 2s + 5)
-   $$
+4. **Multiplicar ambos lados por el denominador común**:
 
-4. **Resolver para \( A \), \( B \) y \( C \)**:
+   $$2s^2 + 3s + 4 = (As + B)(s + 1) + C(s^2 + 2s + 5)$$
+
+5. **Resolver para \( A \), \( B \) y \( C \)**:
    - Para \( s = -1 \):
-     $$
-     2(-1)^2 + 3(-1) + 4 = (A(-1) + B)(-1 + 1) + C((-1)^2 + 2(-1) + 5) \\
+   - 
+     $$2(-1)^2 + 3(-1) + 4 = (A(-1) + B)(-1 + 1) + C((-1)^2 + 2(-1) + 5) \\
      2 - 3 + 4 = ( -A + B )(0) + C(1 - 2 + 5) \\
      3 = 4C \\
-     C = \frac{3}{4}
-     $$
+     C = \frac{3}{4}$$
    - Para \( s = 0 \):
-     $$
-     2(0)^2 + 3(0) + 4 = (A(0) + B)(0 + 1) + C(0^2 + 2(0) + 5) \\
+   - 
+     $$2(0)^2 + 3(0) + 4 = (A(0) + B)(0 + 1) + C(0^2 + 2(0) + 5) \\
      4 = B + 5C \\
      Sustituyendo \( C = \frac{3}{4} \):
      4 = B + 5\left(\frac{3}{4}\right) \\
      4 = B + \frac{15}{4} \\
-     B = 4 - \frac{15}{4} = \frac{1}{4}
-     $$
+     B = 4 - \frac{15}{4} = \frac{1}{4}$$
+     
    - Para \( s = 1 \):
-     $$
-     2(1)^2 + 3(1) + 4 = (A(1) + B)(1 + 1) + C(1^2 + 2(1) + 5) \\
+
+     $$2(1)^2 + 3(1) + 4 = (A(1) + B)(1 + 1) + C(1^2 + 2(1) + 5) \\
      2 + 3 + 4 = (A + B)(2) + C(8) \\
      9 = 2A + 2B + 8C \\
      Sustituyendo \( B = \frac{1}{4} \) y \( C = \frac{3}{4} \):
      9 = 2A + 2\left(\frac{1}{4}\right) + 8\left(\frac{3}{4}\right) \\
      9 = 2A + \frac{1}{2} + 6 \\
      2A = 9 - 6 - \frac{1}{2} = \frac{5}{2} \\
-     A = \frac{5}{4}
-     $$
+     A = \frac{5}{4}$$
 
-5. **Expresión en fracciones parciales**:
+6. **Expresión en fracciones parciales**:
    $$
    F(s) = \frac{\frac{5}{4}s + \frac{1}{4}}{s^2 + 2s + 5} + \frac{\frac{3}{4}}{s + 1}
    $$
 
-6. **Transformada inversa de Laplace**:
+7. **Transformada inversa de Laplace**:
    - Para \( \frac{\frac{5}{4}s + \frac{1}{4}}{s^2 + 2s + 5} \):
      Completamos el cuadrado en el denominador:
      $$
@@ -136,10 +130,9 @@ $$
      \mathcal{L}^{-1}\left\{\frac{\frac{3}{4}}{s + 1}\right\} = \frac{3}{4}e^{-t}
      $$
 
-7. **Solución final**:
-   $$
-   f(t) = \frac{5}{4}e^{-t}\cos(2t) + \frac{1}{4}e^{-t}\sin(2t) + \frac{3}{4}e^{-t}
-   $$
+8. **Solución final**:
+
+   $$f(t) = \frac{5}{4}e^{-t}\cos(2t) + \frac{1}{4}e^{-t}\sin(2t) + \frac{3}{4}e^{-t}$$
 
 ---
 
