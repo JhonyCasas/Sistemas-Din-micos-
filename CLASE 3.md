@@ -45,16 +45,14 @@ $$
 
 ### 4.2. Solución
 1. **Expansión en fracciones parciales**:
-   $$
-   \frac{3s^2 + 5s + 2}{(s + 1)^2 (s + 2)} = \frac{A}{s + 1} + \frac{B}{(s + 1)^2} + \frac{C}{s + 2}
-   $$
 
-2. **Multiplicar ambos lados por el denominador común**:
-   $$
-   3s^2 + 5s + 2 = A(s + 1)(s + 2) + B(s + 2) + C(s + 1)^2
-   $$
+    $$\frac{3s^2 + 5s + 2}{(s + 1)^2 (s + 2)} = \frac{A}{s + 1} + \frac{B}{(s + 1)^2} + \frac{C}{s + 2}$$
 
-3. **Resolver para \( A \), \( B \) y \( C \)**:
+3. **Multiplicar ambos lados por el denominador común**:
+
+   $$3s^2 + 5s + 2 = A(s + 1)(s + 2) + B(s + 2) + C(s + 1)^2$$
+
+4. **Resolver para \( A \), \( B \) y \( C \)**:
    - Para \( s = -1 \):
      $$
      3(-1)^2 + 5(-1) + 2 = A(-1 + 1)(-1 + 2) + B(-1 + 2) + C(-1 + 1)^2 \\
@@ -70,79 +68,51 @@ $$
      C = 4
      $$
    - Para \( s = 0 \):
-     $$
-     3(0)^2 + 5(0) + 2 = A(0 + 1)(0 + 2) + B(0 + 2) + C(0 + 1)^2 \\
+
+     $$3(0)^2 + 5(0) + 2 = A(0 + 1)(0 + 2) + B(0 + 2) + C(0 + 1)^2 \\
      2 = 2A + 2B + C \\
      Sustituyendo \( B = 0 \) y \( C = 4 \):
      2 = 2A + 0 + 4 \\
      2A = -2 \\
-     A = -1
-     $$
+     A = -1$$
 
-4. **Expresión en fracciones parciales**:
-   $$
-   F(s) = \frac{-1}{s + 1} + \frac{0}{(s + 1)^2} + \frac{4}{s + 2}
-   $$
+5. **Expresión en fracciones parciales**:
+   
+   $$F(s) = \frac{-1}{s + 1} + \frac{0}{(s + 1)^2} + \frac{4}{s + 2}$$
 
-5. **Transformada inversa de Laplace**:
-   $$
-   f(t) = -e^{-t} + 4e^{-2t}
-   $$
+7. **Transformada inversa de Laplace**:
+
+   $$f(t) = -e^{-t} + 4e^{-2t}$$
 
 ---
 
-## 5. Ejercicios
+## 9. Ejercicios
 
-📚**Ejercicio 1:** Descomponer la siguiente fracción en fracciones parciales y encontrar su transformada inversa de Laplace:
-$$
-F(s) = \frac{2s^2 + 3s + 1}{(s + 2)^2 (s + 3)}
-$$
+📚**Ejercicio 1:**
 
-**Solución:**
-1. Expansión en fracciones parciales:
-   $$
-   \frac{2s^2 + 3s + 1}{(s + 2)^2 (s + 3)} = \frac{A}{s + 2} + \frac{B}{(s + 2)^2} + \frac{C}{s + 3}
-   $$
-2. Multiplicar ambos lados por el denominador común:
-   $$
-   2s^2 + 3s + 1 = A(s + 2)(s + 3) + B(s + 3) + C(s + 2)^2
-   $$
-3. Resolver para \( A \), \( B \) y \( C \):
-   - Para \( s = -2 \):
-     $$
-     2(-2)^2 + 3(-2) + 1 = A(-2 + 2)(-2 + 3) + B(-2 + 3) + C(-2 + 2)^2 \\
-     8 - 6 + 1 = A(0)(1) + B(1) + C(0) \\
-     3 = B \\
-     B = 3
-     $$
-   - Para \( s = -3 \):
-     $$
-     2(-3)^2 + 3(-3) + 1 = A(-3 + 2)(-3 + 3) + B(-3 + 3) + C(-3 + 2)^2 \\
-     18 - 9 + 1 = A(-1)(0) + B(0) + C(1) \\
-     10 = C \\
-     C = 10
-     $$
-   - Para \( s = 0 \):
-     $$
-     2(0)^2 + 3(0) + 1 = A(0 + 2)(0 + 3) + B(0 + 3) + C(0 + 2)^2 \\
-     1 = 6A + 3B + 4C \\
-     Sustituyendo \( B = 3 \) y \( C = 10 \):
-     1 = 6A + 9 + 40 \\
-     6A = -48 \\
-     A = -8
-     $$
-4. Expresión en fracciones parciales:
-   $$
-   F(s) = \frac{-8}{s + 2} + \frac{3}{(s + 2)^2} + \frac{10}{s + 3}
-   $$
-5. Transformada inversa de Laplace:
-   $$
-   f(t) = -8e^{-2t} + 3te^{-2t} + 10e^{-3t}
-   $$
+$$F(s) = \frac{2s^2 + 3s + 1}{(s + 2)^2 (s + 3)}$$
+
+**Solución:** $$f(t) = -8e^{-2t} + 3te^{-2t} + 10e^{-3t}$$
+   
+   $$ \frac{2s^2 + 3s + 1}{(s + 2)^2 (s + 3)} = \frac{A}{s + 2} + \frac{B}{(s + 2)^2} + \frac{C}{s + 3}$$
+   
+   $$2s^2 + 3s + 1 = A(s + 2)(s + 3) + B(s + 3) + C(s + 2)^2$$
+
+   $$2(-2)^2 + 3(-2) + 1 = A(-2 + 2)(-2 + 3) + B(-2 + 3) + C(-2 + 2)^2 \
+   \8 - 6 + 1 = A(0)(1) + B(1) + C(0) \\3 = B \\B = 3$$
+   
+   $$ 2(-3)^2 + 3(-3) + 1 = A(-3 + 2)(-3 + 3) + B(-3 + 3) + C(-3 + 2)^2 \
+   \18 - 9 + 1 = A(-1)(0) + B(0) + C(1) \\10 = C \\C = 10$$
+ 
+   $$2(0)^2 + 3(0) + 1 = A(0 + 2)(0 + 3) + B(0 + 3) + C(0 + 2)^2 \\1 = 6A + 3B + 4C \\1 = 6A + 9 + 40 \\6A = -48 \\A = -8$$
+
+   $$F(s) = \frac{-8}{s + 2} + \frac{3}{(s + 2)^2} + \frac{10}{s + 3}$$
+
+   $$f(t) = -8e^{-2t} + 3te^{-2t} + 10e^{-3t}$$
 
 ---
 
-## 6. Conclusiones
+## 10. Conclusiones
 
 La **expansión en fracciones parciales con raíces reales iguales** es una técnica esencial en matemáticas aplicadas, ingeniería y ciencias. Permite descomponer fracciones algebraicas complejas en fracciones más simples, lo que facilita su manipulación, integración y análisis. A través de este repositorio, hemos explorado:
 - Los **métodos de expansión** para factores repetidos.
@@ -153,11 +123,8 @@ Esta herramienta es fundamental en áreas como el control automático, el proces
 
 ---
 
-## 7. Referencias
+## 11. Referencias
 
 - [1] **"Matemáticas para Ingeniería"**, Autor: James Stewart.  
 - [2] **MATLAB Documentation**: [https://www.mathworks.com/help/symbolic/partial-fraction-decomposition.html](https://www.mathworks.com/help/symbolic/partial-fraction-decomposition.html)  
 
----
-
-Este repositorio proporciona una guía completa para entender y aplicar la expansión de fracciones parciales con raíces reales iguales. ¡Esperamos que sea de gran ayuda en tu aprendizaje! 😊
