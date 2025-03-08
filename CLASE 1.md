@@ -34,9 +34,9 @@ donde \( s \) es un número complejo.
 $$\mathcal{L}\{e^{at}\} = \frac{1}{s - a}$$
 
 ### 2.2. Propiedades de la Transformada de Laplace
-- **Linealidad**: \( \mathcal{L}\{a f(t) + b g(t)\} = a F(s) + b G(s) \).
-- **Desplazamiento en el Tiempo**: \( \mathcal{L}\{f(t - a) u(t - a)\} = e^{-as} F(s) \).
-- **Transformada de la Derivada**: \( \mathcal{L}\{f'(t)\} = s F(s) - f(0) \).
+- **Linealidad**: $$\( \mathcal{L}\{a f(t) + b g(t)\} = a F(s) + b G(s) \)$$.
+- **Desplazamiento en el Tiempo**: $$\( \mathcal{L}\{f(t - a) u(t - a)\} = e^{-as} F(s) \)$$.
+- **Transformada de la Derivada**: $$\( \mathcal{L}\{f'(t)\} = s F(s) - f(0) \)$$.
 
 ---
 
