@@ -136,23 +136,21 @@ $$F(s) = \frac{2s^2 + 3s + 4}{(s^2 + 2s + 5)(s + 1)}$$
 
 ---
 
-## 6. Ejercicios
+## 9. Ejercicios
 
-📚**Ejercicio 1:** Descomponer la siguiente fracción en fracciones parciales y encontrar su transformada inversa de Laplace:
-$$
-F(s) = \frac{3s^2 + 4s + 5}{(s^2 + 4s + 13)(s + 2)}
-$$
+📚**Ejercicio 1:** 
+$$F(s) = \frac{3s^2 + 4s + 5}{(s^2 + 4s + 13)(s + 2)}$$
 
-**Solución:**
-1. Expansión en fracciones parciales:
+**Solución:** $$\[f(t) = e^{-2t}\left(2\cos(3t) - \frac{8}{3}\sin(3t) + 1\right)\]$$
+
    $$
    \frac{3s^2 + 4s + 5}{(s^2 + 4s + 13)(s + 2)} = \frac{As + B}{s^2 + 4s + 13} + \frac{C}{s + 2}
    $$
-2. Multiplicar ambos lados por el denominador común:
+
    $$
    3s^2 + 4s + 5 = (As + B)(s + 2) + C(s^2 + 4s + 13)
    $$
-3. Resolver para \( A \), \( B \) y \( C \):
+
    - Para \( s = -2 \):
      $$
      3(-2)^2 + 4(-2) + 5 = (A(-2) + B)(-2 + 2) + C((-2)^2 + 4(-2) + 13) \\
@@ -170,14 +168,7 @@ $$
      B = -4
      $$
    - Para \( s = 1 \):
-     $$
-     3(1)^2 + 4(1) + 5 = (A(1) + B)(1 + 2) + C(1^2 + 4(1) + 13) \\
-     3 + 4 + 5 = (A + B)(3) + C(18) \\
-     12 = 3A + 3B + 18C \\
-     Sustituyendo \( B = -4 \) y \( C = 1 \):
-     12 = 3A + 3(-4) + 18(1) \\
-     12 = 3A - 12 + 18 \\
-     3A = 12 + 12 - 18 = 6 \\
-     A = 2
-     $$
-4. Exp
+   - $$3(1)^2 + 4(1) + 5 = (A(1) + B)(1 + 2) + C(1^2 + 4(1) + 13) \\3 + 4 + 5 = (A + B)(3) + C(18) \\12 = 3A + 3B + 18C \\ Sustituyendo \( B = -4 \) y \( C = 1 \):12 = 3A + 3(-4) + 18(1) \\12 = 3A - 12 + 18 \\3A = 12 + 12 - 18 = 6 \\A = 2$$
+
+## 10.Conclusiones
+La fórmula cuadrática es una herramienta fundamental en matemáticas y ciencias aplicadas debido a su capacidad para resolver ecuaciones de segundo grado
