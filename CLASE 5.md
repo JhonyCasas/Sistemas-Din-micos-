@@ -96,10 +96,9 @@ $$
 
 ## 5. Ejercicios
 
-📚**Ejercicio 1:** Resolver la siguiente ecuación diferencial utilizando anuladores y fracciones parciales:
-$$
-\frac{d^2y}{dt^2} + 4\frac{dy}{dt} + 4y = e^{-2t}
-$$
+📚**Ejercicio 1:** 
+
+$$\frac{d^2y}{dt^2} + 4\frac{dy}{dt} + 4y = e^{-2t}$$
 
 **Solución:**
 1. Identificar el término no homogéneo:
@@ -151,11 +150,3 @@ Esta herramienta es fundamental en áreas como el control automático, el proces
 ## 7. Referencias
 
 - [1] **"Matemáticas para Ingeniería"**, Autor: James Stewart.  
-- [2] **"Control Systems Engineering"**, Autor: Norman S. Nise.  
-- [3] **Editor de ecuaciones en LaTeX**: [http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp](http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp)  
-- [4] **MATLAB Documentation**: [https://www.mathworks.com/help/symbolic/partial-fraction-decomposition.html](https://www.mathworks.com/help/symbolic/partial-fraction-decomposition.html)  
-- [5] **"Advanced Engineering Mathematics"**, Autor: Erwin Kreyszig.  
-
----
-
-Este repositorio proporciona una guía completa para entender y aplicar la solución de fracciones parciales por anuladores. ¡Esperamos que sea de gran ayuda en tu aprendizaje! 😊
