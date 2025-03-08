@@ -107,5 +107,3 @@ En circuitos eléctricos, la Transformada de Laplace se utiliza para resolver ec
 La combinación de **Sistemas Dinámicos** y la **Transformada de Laplace** es fundamental para el análisis y diseño de sistemas en ingeniería y ciencias. La Transformada de Laplace simplifica el estudio de sistemas dinámicos al convertir ecuaciones diferenciales en ecuaciones algebraicas, permitiendo el análisis de estabilidad, respuesta temporal y diseño de controladores.
 
 ---
-
-Este repositorio proporciona una introducción clara y estructurada a los Sistemas Dinámicos y su relación con la Transformada de Laplace, con ejemplos y aplicaciones prácticas. Puedes expandir cada sección con más detalles, gráficos y enlaces a recursos adicionales para enriquecer el contenido.
