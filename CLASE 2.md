@@ -83,6 +83,8 @@ Tabla 1. Tipos de factores y sus formas de expansión.
 
 $$\frac{5s + 10}{(s + 1)(s + 2)}$$
 
+**Solucion:** $f(t) = 5e^{-t}$
+
 $$=\frac{5s + 10}{(s + 1)(s + 2)} = \frac{A}{s + 1} + \frac{B}{s + 2}$$
 
 $$=5s + 10 = A(s + 2) + B(s + 1)$$
@@ -105,6 +107,8 @@ $$f(t) = 5e^{-t}$$
 
 $$\frac{3s^2 + 7s + 2}{(s + 1)^2 (s + 2)}$$
 
+**Solucion:** $\boxed{f(t) = 3e^{-t} - 2te^{-t}}$
+
 $$3s^2 + 7s + 2 = A(s + 1)(s + 2) + B(s + 2) + C(s + 1)^2$$
 
 $$3(-1)^2 + 7(-1) + 2 = A(-1 + 1)(-1 + 2) + B(-1 + 2) + C(-1 + 1)^2 \\
@@ -123,8 +127,45 @@ $$3(0)^2 + 7(0) + 2 = A(0 + 1)(0 + 2) + B(0 + 2) + C(0 + 1)^2 \\
 A = 3$$
 $$\frac{3s^2 + 7s + 2}{(s + 1)^2 (s + 2)} = \frac{3}{s + 1} - \frac{2}{(s + 1)^2}$$
 
-$$\mathcal{L}^{-1}{\frac{5}{s + 1}} = 5e^{-t}$$
-$$f(t) = 5e^{-t}$$
+
+$$\mathcal{L}^{-1}{\frac{3s^2 + 7s + 2}{(s + 1)^2 (s + 2)}} = 3e^{-t} - 2te^{-t}$$
+
+$$\boxed{f(t) = 3e^{-t} - 2te^{-t}}$$
+
+📚**Ejercicio 3:** 
+
+$$\frac{2s^2 - 4}{(s + 1)(s - 2)(s - 3)}$$
+
+**Solucion:** $\boxed{f(t) = -\frac{1}{6}e^{-t} - \frac{4}{3}e^{2t} + \frac{7}{2}e^{3t}}$
+
+$$\frac{2s^2 - 4}{(s + 1)(s - 2)(s - 3)} = \frac{A}{s + 1} + \frac{B}{s - 2} + \frac{C}{s - 3}$$
+
+$$2s^2 - 4 = A(s - 2)(s - 3) + B(s + 1)(s - 3) + C(s + 1)(s - 2)$$
+$$A(s^2 - 5s + 6)$$
+$$B(s^2 - 2s - 3)$$
+$$C(s^2 - s - 2)$$
+$$2s^2 - 4 = (A + B + C)s^2 + (-5A - 2B - C)s + (6A - 3B - 2C)$$
+
+$$A + B + C = 2$$
+$$-5A - 2B - C = 0$$
+$$6A - 3B - 2C = -4$$
+$$ C = 2 - A - B$$
+
+$$-4A - B = 2$$
+
+$$ 8A - B = 0 $$
+
+$$A = -\frac{1}{6}, \quad B = -\frac{4}{3}, \quad C = \frac{7}{2} $$
+
+$$\frac{2s^2 - 4}{(s + 1)(s - 2)(s - 3)} = -\frac{1}{6(s + 1)} - \frac{4}{3(s - 2)} + \frac{7}{2(s - 3)}$$
+
+$$-\frac{1}{6}e^{-t} $$
+
+ $$-\frac{4}{3}e^{2t}$$
+
+$$\frac{7}{2}e^{3t}$$
+
+$$\boxed{f(t) = -\frac{1}{6}e^{-t} - \frac{4}{3}e^{2t} + \frac{7}{2}e^{3t}}$$
 
 ## 10. Conclusiones
 
@@ -142,4 +183,18 @@ La **expansión de fracciones parciales** es una técnica esencial en matemátic
    - Para factores cuadráticos irreducibles:
 
     $$\frac{P(s)}{(s^2 + as + b)} = \frac{As + B}{s^2 + as + b}$$
+
+
+   ## 11. Referencias
+
+1. **Stewart, J. (2015). *Cálculo: Trascendentes tempranas.* Cengage Learning.**  
+   - Técnicas de integración (Sección 7.4).  
+   - Enlace: [Cengage](https://www.cengage.com)
+
+2. **Zill, D. G. (2014). *Matemáticas avanzadas para ingeniería.* Cengage Learning.**  
+   - Transformada de Laplace (Sección 7.2).  
+   - Enlace: [Cengage](https://www.cengage.com)
+
+3. **Khan Academy. *Expansion en Fracciones parciales.***  
+   - Enlace: [Khan Academy](https://www.youtube.com/results?search_query=expansion+en+fracciones+parciales)
 
