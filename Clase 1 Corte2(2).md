@@ -73,29 +73,109 @@ $y(t) = e^{-2t}(1 + 2t)$
 
 ---
 
-## 4. Ejercicios Propuestos
+## 4. Ejercicios
 
-📚 **Ejercicio 1:** Resolver la ecuación diferencial $\( y' + 5y = 3 \)$ con $\( y(0) = 0 \).$
+📚 **Ejercicio 1:** Resolver la ecuación diferencial $\( y' + 5y = 3 \)$ con $\( y(0) = 0 \)$.
 
-**Solución:**
-1. Aplicar Laplace:
+**Solución:** $y(t) = \frac{3}{5}(1 - e^{-5t})$
+
+
+$\[\mathcal{L}\{y' + 5y\} = \mathcal{L}\{3\}\]$
+
+$sY(s) - y(0) + 5Y(s) = \frac{3}{s}$
+  
 $sY(s) + 5Y(s) = \frac{3}{s}$
-2. Despejar $\( Y(s) \):$
+
+$Y(s)(s + 5) = \frac{3}{s}$
+   
 $Y(s) = \frac{3}{s(s + 5)}$
-3. Transformada inversa:
+
+
+$\frac{3}{s(s + 5)} = \frac{A}{s} + \frac{B}{s + 5}$
+
+$3 = A(s + 5) + Bs$
+  
+$Y(s) = \frac{3/5}{s} - \frac{3/5}{s + 5}$
+
+$y(t) = \frac{3}{5}\mathcal{L}^{-1}{\frac{1}{s}} - \frac{3}{5}\mathcal{L}^{-1}{\frac{1}{s + 5}}$
+
 $y(t) = \frac{3}{5}(1 - e^{-5t})$
 
-📚 **Ejercicio 2:** Resolver $\( y'' + y = \sin(t) \)$ con $\( y(0) = 0, y'(0) = 1 \).$
+📚 **Ejercicio 2:** Resolver $\( y'' + y = \sin(t) \)$ con $\( y(0) = 0, y'(0) = 1$.
 
-**Solución:**
-1. Aplicar Laplace:
-$ s^2Y(s) - 1 + Y(s) = \frac{1}{s^2 + 1}$
-2. Despejar $\( Y(s) \):$
+**Solución:**   $y(t) = \frac{3\sin(t) - t\cos(t)}{2}$
+
    
-$Y(s) = \frac{s^2 + 2}{(s^2 + 1)^2}$
+   $\mathcal{L}\{y'' + y\} = \mathcal{L}\{\sin(t)\}$
+   
+   $s^2Y(s) - sy(0) - y'(0) + Y(s) = \frac{1}{s^2 + 1}$
+   
+   $y(0) = 0 \) y \( y'(0) = 1 \)$:
+   
+   $s^2Y(s) - 1 + Y(s) = \frac{1}{s^2 + 1}$
+  
+   $Y(s)(s^2 + 1) = 1 + \frac{1}{s^2 + 1}$
+   
+   $Y(s) = \frac{1}{s^2 + 1} + \frac{1}{(s^2 + 1)^2}$
 
-4. Transformada inversa:
-$y(t) = \frac{t\sin(t) + \cos(t)}{2}$
+   $Y(s) = \frac{s^2 + 2}{(s^2 + 1)^2}$
+
+   $\mathcal{L}^{-1}{\frac{1}{s^2 + 1}} = \sin(t)$
+     
+   $\mathcal{L}^{-1}{\frac{1}{(s^2 + 1)^2}} = \frac{\sin(t) - t\cos(t)}{2}$
+   
+   $y(t) = \sin(t) + \frac{\sin(t) - t\cos(t)}{2}$
+     
+   $y(t) = \frac{2\sin(t) + \sin(t) - t\cos(t)}{2}$
+     
+   $y(t) = \frac{3\sin(t) - t\cos(t)}{2}\$
+
+
+ 📚 **Ejercicio 3:** Resolver la ecuación diferencial $\( x'' + 2x' + 5x = 3 \)$ con $\( x(0) = a \)$ y $\( x'(0) = b \)$.
+
+**Solucion**  $x(t) = \frac{3}{5} - \frac{3}{5}e^{-t}\cos(2t) - \frac{3}{10}e^{-t}\sin(2t)\$
+
+$\[{L}\{x''\} + 2{L}\{x'\} + 5{L}\{x\} = {L}\{3\}\]$
+
+$[s^2 X(s) - s x(0) - x'(0)] + 2[s X(s) - x(0)] + 5X(s) = \frac{3}{s}\
+
+$s^2 X(s) - s a - b + 2s X(s) - 2a + 5X(s) = \frac{3}{s}$
+
+$X(s)(s^2 + 2s + 5) = \frac{3}{s}$
+
+$X(s) = \frac{A}{s} + \frac{B s + C}{s^2 + 2s +5}$
+
+$s^2 + 2s + 5 = 0 \implies s = \frac{-2 \pm \sqrt{4 - 20}}{2} = -1 \pm 2i$
+
+$\\frac{3}{s(s^2 + 2s + 5)} = \frac{A}{s} + \frac{Bs + C}{s^2 + 2s + 5}\$
+
+$3 = A(s^2 + 2s + 5) + (Bs + C)s\$
+
+$3 = A(s^2 + 2s + 5) + Bs^2 + Cs\$
+
+$3 = As^2 + 2As + 5A + Bs^2 + Cs\$
+
+$3 = (A + B)s^2 + (2A + C)s + 5A\$
+
+$A = \frac{3}{5}, \quad B = -A = -\frac{3}{5}, \quad C = -2A = -\frac{6}{5}\$
+
+$\\frac{3}{s(s^2 + 2s + 5)} = \frac{3}{5s} + \frac{-\frac{3}{5}s - \frac{6}{5}}{s^2 + 2s + 5}\$
+
+$\\mathcal{L}^{-1}{ \frac{3}{5s}} = \frac{3}{5}\$
+
+$\\frac{-\frac{3}{5}s - \frac{6}{5}}{s^2 + 2s + 5} = \frac{-\frac{3}{5}(s + 1) - \frac{3}{5}}{(s + 1)^2 + 2^2}\$
+
+$\= \frac{-\frac{3}{5}(s + 1)}{(s + 1)^2 + 4} - \frac{3}{10} \cdot \frac{2}{(s + 1)^2 + 4}\$
+
+$\\mathcal{L}^{-1}{ \frac{s + a}{(s + a)^2 + b^2}} = e^{-at}\cos(bt)\$
+
+$\\mathcal{L}^{-1}{ \frac{b}{(s + a)^2 + b^2}} = e^{-at}\sin(bt)\$
+
+$\\mathcal{L}^{-1}{ \frac{-\frac{3}{5}(s + 1)}{(s + 1)^2 + 4}} = -\frac{3}{5}e^{-t}\cos(2t)\$
+
+$\\mathcal{L}^{-1}{ \frac{-\frac{3}{10} \cdot 2}{(s + 1)^2 + 4}} = -\frac{3}{10}e^{-t}\sin(2t)$
+
+$x(t) = \frac{3}{5} - \frac{3}{5}e^{-t}\cos(2t) - \frac{3}{10}e^{-t}\sin(2t)\$
 
 ---
 
