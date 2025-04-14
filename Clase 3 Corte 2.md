@@ -1,4 +1,4 @@
-Dinámica de Sistemas Mecánicos - Sistemas Masa-Resorte-Amortiguador
+# Dinámica de Sistemas Mecánicos - Sistemas Masa-Resorte-Amortiguador
 
 La dinámica de sistemas mecánicos permite comprender el comportamiento de cuerpos en movimiento bajo la acción de fuerzas. En esta clase se abordará un modelo clásico: el sistema masa-resorte-amortiguador, el cual es fundamental en ingeniería para representar oscilaciones, vibraciones y amortiguación en estructuras, vehículos, maquinaria y más. Se estudiarán los principios físicos que rigen su funcionamiento como la ley de Hooke, la fricción viscosa y las leyes de Newton. Este análisis permite construir modelos matemáticos que describen con precisión su comportamiento.
 
