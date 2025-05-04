@@ -1,81 +1,104 @@
-# Modelado de Sistemas Dinámicos Hidráulicos: Tanques de Agua  
+# Dinámica de Sistemas en Sistemas Hidráulicos
 
-Este repositorio está enfocado en el modelado matemático de sistemas dinámicos hidráulicos, específicamente en tanques de agua interconectados, flujos de entrada/salida e intercambio de energía. Se abordarán conceptos fundamentales como balances de masa, ecuaciones de Bernoulli, y modelado en espacio de estados, aplicados a sistemas reales como redes de distribución de agua o sistemas de refrigeración.  
-
-### 1.1. Balance de Masa en Tanques  
->🔑 *Definición:* La *ley de conservación de masa* para un tanque establece:  
-> $$\frac{dV}{dt} = Q_{in} - Q_{out}$$  
-> donde $V$ es volumen ($V = A \cdot h$) y $Q$ flujo volumétrico.  
-
-### 1.2. Ecuación de Torricelli  
-Para flujo por gravedad:  
-$$Q_{out} = k\sqrt{h}, \quad k = C_d A_{orificio}\sqrt{2g}$$  
-
-## 2. Modelado de Sistemas Acoplados  
-### 2.1. Dos Tanques Interconectados  
-![Diagrama tanques](images/two_tanks.png)  
-*Figura 1: Tanques con acoplamiento hidráulico.*  
-
-💡**Ejemplo 1:** Dinámica no lineal para tanques con áreas $A_1$, $A_2$:  
-$$
-\begin{cases}
-\frac{dh_1}{dt} = \frac{Q_{in} - k_1\sqrt{h_1 - h_2}}{A_1} \\
-\frac{dh_2}{dt} = \frac{k_1\sqrt{h_1 - h_2} - k_2\sqrt{h_2}}{A_2}
-\end{cases}
-$$
-
-## 3. Simulación Numérica  
-### 3.1. Método de Euler  
-
-def simulate_tanks(h1_0, h2_0, k1, k2, A1, A2, Qin, dt, steps):
-    h1, h2 = h1_0, h2_0
-    for _ in range(steps):
-        dh1 = (Qin - k1*np.sqrt(max(h1-h2,0)))/A1 * dt
-        dh2 = (k1*np.sqrt(max(h1-h2,0)) - k2*np.sqrt(h2))/A2 * dt
-        h1 += dh1; h2 += dh2
-    return h1, h2
-
-# Modelado de Sistemas Dinámicos Hidráulicos: Tanques de Agua
-
-Repositorio para análisis de sistemas de tanques interconectados, flujos y transferencia de energía.
-
-# Modelado de Sistemas Dinámicos Hidráulicos: Tanques de Agua  
-**Repositorio académico** | [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-## 📌 Introducción  
-Estudio de modelos matemáticos para sistemas hidráulicos con:  
-- Tanques interconectados  
-- Flujos turbulentos/laminares  
-- Transferencia de energía térmica  
-
-## 📚 Contenido
-1. [Fundamentos Teóricos](#1-fundamentos-teóricos)  
-2. [Modelado Matemático](#2-modelado-matemático)  
-3. [Simulación Numérica](#3-simulación-numérica)  
-4. [Ejercicios Resueltos](#4-ejercicios-resueltos)  
+Los sistemas hidráulicos son fundamentales en aplicaciones industriales, donde el control de flujo y nivel de líquidos es esencial para garantizar operaciones eficientes y seguras. En esta clase, exploraremos los principios básicos de la dinámica de sistemas aplicados a tanques interconectados, modelando su comportamiento mediante ecuaciones diferenciales y analizando las relaciones entre flujos, resistencias y niveles de líquido.
 
 ---
 
-## 1. Fundamentos Teóricos  
-### 1.1. Ecuaciones Básicas  
-> 🔑 *Ley de Conservación de Masa*:  
-> $$\frac{d(ρAh)}{dt} = ρQ_{in} - ρQ_{out}$$  
-> Para líquidos incompresibles ($ρ$ constante):  
-> $$A\frac{dh}{dt} = Q_{in} - Q_{out}$$
+## 1. Introducción a los Sistemas de Tanques
 
-### 1.2. Tipos de Flujos  
-| Tipo        | Ecuación               | Rango Reynolds |
-|-------------|------------------------|----------------|
-| Laminar     | $Q = k_1Δh$            | Re < 2000      |
-| Turbulento  | $Q = k_2\sqrt{Δh}$     | Re > 4000      |
+Los sistemas de tanques son comunes en la industria para almacenar y regular líquidos. El objetivo principal es mantener un flujo o nivel constante, lo que requiere un modelo matemático que describa las interacciones entre las variables del sistema.
 
-*Tabla 1: Clasificación de regímenes de flujo*
+>🔑 *Definición:* Un *sistema de tanques* es un conjunto de recipientes interconectados donde el flujo de líquido está influenciado por resistencias al flujo y las áreas transversales de los tanques.
 
 ---
 
-## 2. Modelado Matemático  
-### 2.1. Sistema de Dos Tanques  
-```mermaid
-graph LR
-    A[Tanque 1] -->|Q₁₂| B[Tanque 2]
-    B -->|Q₂ₑ| C[Entorno]
+## 2. Modelado de un Tanque Individual
+
+### 2.1. Variables del Sistema
+- \( $q_i$ \): Flujo de entrada al tanque.
+- \( $q_1$ \): Flujo de salida del tanque.
+- \( $R_1$ \): Resistencia al flujo.
+- \( $A_1$ \): Área transversal del tanque.
+- \( $h_1$ \): Nivel de líquido en el tanque.
+
+### 2.2. Ecuaciones Fundamentales
+El flujo de salida se relaciona con el nivel de líquido mediante:
+
+$$q_1 = \frac{h_1}{R_1}$$
+
+La dinámica del nivel del líquido se describe con:
+
+$$A_1 \frac{dh_1}{dt} = q_i - q_1$$
+
+💡**Ejemplo 1:** Si \( $q_i = 5\frac{m^3}{s}$) , \( $R_1 = 2 \frac{s}{m^2}$\) , y \($A_1 = 10{m}^2$\), el nivel en estado estacionario se calcula como:
+
+$$h_1 = q_i \cdot R_1 = 10m$$
+
+---
+
+## 3. Tanques Interconectados
+
+### 3.1. Modelo de Dos Tanques
+En sistemas con dos tanques interconectados, las ecuaciones se extienden para incluir las interacciones entre ellos.
+
+#### 3.1.1. Variables Adicionales
+- \( $q_2$\): Flujo de salida del segundo tanque.
+- \( $R_2$ \): Resistencia al flujo del segundo tanque.
+- \( $A_2$ \): Área transversal del segundo tanque.
+- \( $h_2$ \): Nivel de líquido en el segundo tanque.
+
+#### 3.1.2. Ecuaciones del Sistema
+Para el primer tanque:
+
+$$A_1 \frac{dh_1}{dt} = q_i - q_1$$
+
+Para el segundo tanque:
+
+$$A_2 \frac{dh_2}{dt} = q_1 - q_2$$
+
+Donde:
+
+$$q_1 = \frac{h_1 - h_2}{R_1}$$
+
+$$q_2 = \frac{h_2}{R_2}$$
+
+### 3.2. Modelo Resultante
+Combinando las ecuaciones, se obtiene un sistema de ecuaciones diferenciales acopladas:
+
+$$A_1 R_1 R_2 A_2 \frac{d^2 q_2}{dt^2} + (A_1 R_1 + A_1 R_2 + R_2 A_2) \frac{d q_2}{dt} + q_2 = q_i$$
+
+💡**Ejemplo 2:**  Si \( $A_1 = A_2 = 5{m}^2 $\),  \( $R_1 = R_2 = 1\frac{s}{m^2}$ \),  y  \( $q_i$ \)  es constante, el sistema alcanza un equilibrio donde:
+\( $$q_2 = q_i$$ \).
+
+---
+
+## 4. Ejercicios
+
+📚 **Ejercicio 1:**  
+Para un tanque individual con \($A_1 = 8{m^2}$\) y \($R_1 = 4\frac{s}{m^2}$\), determine el nivel de líquido \( $h_1$ \) en estado estacionario si el flujo de entrada \( $q_i = 2\frac{m^3}{s}$\).
+
+**Solución:**  
+En estado estacionario, \($\frac{dh_1}{dt} = 0$\), por lo tanto:
+
+$$q_i = q_1 = \frac{h_1}{R_1}$$
+
+$$h_1 = q_i \cdot R_1 = 2 \cdot 4 = 8{m}. $$
+
+📚 **Ejercicio 2:**  
+Para dos tanques interconectados con \($A_1 = A_2 = 6{m}^2$\), \( $R_1 = 3\frac{s}{m^2}$\), y \( $R_2 = 2\frac{s}{m^2}$\), calcule el flujo \($q_2$\) en estado estacionario si \( $q_i = 4\frac{m^3}{s}$\).
+
+**Solución:**  
+En equilibrio, \( $q_2 = q_i = 4\frac{m^3}{s}$\).
+
+---
+
+## 5. Conclusiones
+
+En esta clase, hemos modelado sistemas hidráulicos de tanques individuales e interconectados, utilizando ecuaciones diferenciales para describir su dinámica. Estos modelos son esenciales para diseñar sistemas de control que mantengan niveles y flujos deseados en aplicaciones industriales.
+
+---
+
+## 6. Referencias
+
+- C. Chen, *Analog and digital control system design*, New York, Saunders College Publishing.
+- Presentación adjunta: "Sistemas hidráulicos", Sexto semestre – Sistemas Dinámicos.
