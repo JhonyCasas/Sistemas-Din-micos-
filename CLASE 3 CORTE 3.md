@@ -93,7 +93,51 @@ $$\frac{X(s)}{V(s)} = \frac{K_s}{(Ls + R)(ms^2 + bs + k)} = \frac{0.3}{(0.1s + 2
 **Enunciado**: Determine la inercia equivalente $J_{\text{equiv}}$ para un sistema con engranajes donde $J_{N1} = 0.2\,kg\cdot m^2$, $J_{N2} = 0.5\,kg\cdot m^2$, $J = 1\,kg\cdot m^2$, y relación $N_1/N_2 = 0.5$.  
 
 **Solución**:  
-$$J_{\text{equiv}} = 0.2 + (0.5)^2 (1 + 0.5) = 0.2 + 0.25 \times 1.5 = 0.575\,kg\cdot m^2$$  
+$$J_{\text{equiv}} = 0.2 + (0.5)^2 (1 + 0.5) = 0.2 + 0.25 \times 1.5 = 0.575\,kg\cdot m^2$$
+
+###  Ejercicio 3
+- $\overline{\Theta}_i$ = temperatura en estado estable del líquido que entra, °C  
+- $\overline{\Theta}_o$ = temperatura en estado estable del líquido que sale, °C  
+- $G$ = velocidad de flujo del líquido en estado estable, kg/seg  
+- $M$ = masa del líquido en el tanque, kg  
+- $c$ = calor específico del líquido, kcal/kg°C  
+- $R$ = resistencia térmica, °C·seg/kcal  
+- $C$ = capacitancia térmica, kcal/°C  
+- $H$ = entrada del flujo de calor en estado estable, kcal/seg
+
+
+Se tiene:
+
+- $h_o = G c \theta$
+- $C = M c$
+- $R = \dfrac{\theta}{h_o} = \dfrac{1}{G c}$
+
+La ecuación diferencial para este sistema es:
+
+$$
+C \, d\theta = (h_i - h_o) \, dt
+$$
+
+o bien:
+
+$$
+C \, \dfrac{d\theta}{dt} = h_i - h_o
+$$
+
+$\[RC \frac{d\theta}{dt} + \theta = Rh_i\]$
+
+$\[\frac{\Theta(s)}{H_i(s)} = \frac{R}{RCs + 1}\]$
+
+$\[C \, d\theta = (Gc\theta_i - h_o) \, dt\]$
+
+$\[C \frac{d\theta}{dt} = Gc\theta_i - h_o\]$
+
+$\[RC \frac{d\theta}{dt} + \theta = \theta_i\]$
+
+$\[\frac{\Theta(s)}{\Theta_i(s)} = \frac{1}{RCs + 1}\]$
+
+$\[RC \frac{d\theta}{dt} + \theta = \theta_i + Rh_i\]$
+
 
 ---
 
