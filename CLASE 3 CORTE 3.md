@@ -96,6 +96,13 @@ $$\frac{X(s)}{V(s)} = \frac{K_s}{(Ls + R)(ms^2 + bs + k)} = \frac{0.3}{(0.1s + 2
 $$J_{\text{equiv}} = 0.2 + (0.5)^2 (1 + 0.5) = 0.2 + 0.25 \times 1.5 = 0.575\,kg\cdot m^2$$
 
 ###  Ejercicio 3
+
+*Figura 1*.
+![Comparación entradas](https://github.com/JhonyCasas/Sistemas-Din-micos-/blob/main/Imagenes%20Apuntes/Grafica%204.png)
+
+*Figura 2*.
+![Comparación entradas](https://github.com/JhonyCasas/Sistemas-Din-micos-/blob/main/Imagenes%20Apuntes/Grafica%203%20.png)
+
 - $\overline{\Theta}_i$ = temperatura en estado estable del líquido que entra, °C  
 - $\overline{\Theta}_o$ = temperatura en estado estable del líquido que sale, °C  
 - $G$ = velocidad de flujo del líquido en estado estable, kg/seg  
