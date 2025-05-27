@@ -214,3 +214,9 @@ $$ R(s) \rightarrow \boxed{G_1} \rightarrow \boxed{G_2} \rightarrow Y(s) $$
 
 -   **Diagramas de Bloques:** Intuitivos para representar la estructura física de un sistema y el flujo de señales entre sus componentes funcionales. Son útiles para el diseño y la implementación de sistemas de control.
 -   **Diagramas de Flujo de Señales:** Más abstractos, enfocados en las relaciones entre las variables del sistema. La fórmula de Mason proporciona un método sistemático
+
+-   ### 7. Referencias
+
+-   Ogata, K. Ingeniería de Control Moderna. 5ª edición. Prentice Hall.
+Nise, N. Control Systems Engineering. 6ª edición. 2011.
+Hernández, R. Introducción a los sistemas de control. Pearson, 2010.
