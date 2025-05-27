@@ -97,6 +97,11 @@ $$J_{\text{equiv}} = 0.2 + (0.5)^2 (1 + 0.5) = 0.2 + 0.25 \times 1.5 = 0.575\,kg
 
 ###  Ejercicio 3
 
+Se tiene el siguiente diagrama de bloques (Fig.1) el cual modela un sistema de calefaccion (fig.2)
+
+**Solución**: 
+$\[RC \frac{d\theta}{dt} + \theta = \theta_i + Rh_i\]$
+
 *Figura 1*.
 ![Comparación entradas](https://github.com/JhonyCasas/Sistemas-Din-micos-/blob/main/Imagenes%20Apuntes/Grafica%204.png)
 
@@ -154,5 +159,5 @@ El modelamiento con diagramas de bloques permite integrar múltiples subsistemas
 ---
 
 ## Referencias
-- Hernández, R. (2010). *Introducción a los sistemas de control*. Pearson.  
-- Chen, C. *Analog and digital control system design*. Saunders College Publishing.  
+- Presentación: "Modelamiento de sistemas con diagramas de bloques" por Ing. Jorge Eduardo Cote Ballesteros (2025).
+- Ogata, K. (2010). Ingeniería de Control Moderna (5ª ed.). Pearson. 
