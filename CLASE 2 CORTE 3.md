@@ -20,7 +20,7 @@ $G(s) = \frac{Y(s)}{U(s)} = \frac{N(s)}{D(s)}$
 
 💡 *Ejemplo 1*: Para $G(s) = \frac{3s-1}{s^2 + 3s + 2}$:  
 - *Cero*: $\( s = \frac{1}{3} \)$.  
-- *Polos*: $\( s = -1 \)$ y $\( s = -2 \)$ $(raíces de \( s^2 + 3s + 2 = 0 \)$.
+- *Polos*: $\( s = -1 \)$ y $\( s = -2 \)$ (raíces de $\( s^2 + 3s + 2 = 0 \)$.
 
 ## 3. Teorema del Valor Final
 
@@ -37,7 +37,7 @@ $\lim_{s \to 0} s \cdot \frac{4}{s(5s+1)} = 4$
 ### 4.1. Entrada Escalón
 
 *Definición*:  
-> Cambio abrupto en la entrada desde cero hasta un valor constante A en t=0. Modela perturbaciones súbitas o cambios de referencia.
+> Cambio abrupto en la entrada desde cero hasta un valor constante A en $t=0$. Modela perturbaciones súbitas o cambios de referencia.
 
 *Expresión matemática*:  
 $u(t) = \begin{cases} A & \text{para } t \geq 0 \\ 0 & \text{para } t < 0 \end{cases} \quad \mathcal{L}\{u(t)\} = \frac{A}{s}$
@@ -88,6 +88,7 @@ $$ p(t) = \begin{cases} At^2 & \text{para } t \geq 0 \\ 0 & \text{para } t < 0 \
 *Figura 1*. Comparación gráfica de entradas de prueba
 
 ![Comparación entradas](https://github.com/JhonyCasas/Sistemas-Din-micos-/blob/main/Imagenes%20Apuntes/Grafica%201.png)
+
 Figura 1. Representación gráfica de las señales escalón, rampa y parábola.
 
 ### 4.5. Selección de Entradas Adecuadas
