@@ -100,5 +100,4 @@ En esta clase, hemos modelado sistemas hidráulicos de tanques individuales e in
 
 ## 6. Referencias
 
-- C. Chen, *Analog and digital control system design*, New York, Saunders College Publishing.
 - Presentación adjunta: "Sistemas hidráulicos", Sexto semestre – Sistemas Dinámicos.
