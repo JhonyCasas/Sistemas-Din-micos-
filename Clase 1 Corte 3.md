@@ -14,6 +14,8 @@ Los sistemas de tanques son comunes en la industria para almacenar y regular lí
 
 ## 2. Modelado de un Tanque Individual
 
+[![tanque-indi.png](https://i.postimg.cc/sX8sq4ft/tanque-indi.png)](https://postimg.cc/8Jh2rW6H)
+
 ### 2.1. Variables del Sistema
 - \( $q_i$ \): Flujo de entrada al tanque.
 - \( $q_1$ \): Flujo de salida del tanque.
@@ -37,6 +39,8 @@ $$h_1 = q_i \cdot R_1 = 10m$$
 ---
 
 ## 3. Tanques Interconectados
+
+[![inter.png](https://i.postimg.cc/dtY9rPwT/inter.png)](https://postimg.cc/NLdTvnyg)
 
 ### 3.1. Modelo de Dos Tanques
 En sistemas con dos tanques interconectados, las ecuaciones se extienden para incluir las interacciones entre ellos.
@@ -66,6 +70,8 @@ $$q_2 = \frac{h_2}{R_2}$$
 Combinando las ecuaciones, se obtiene un sistema de ecuaciones diferenciales acopladas:
 
 $$A_1 R_1 R_2 A_2 \frac{d^2 q_2}{dt^2} + (A_1 R_1 + A_1 R_2 + R_2 A_2) \frac{d q_2}{dt} + q_2 = q_i$$
+
+[![mod.png](https://i.postimg.cc/SsZp87zn/mod.png)](https://postimg.cc/mzFqW9j4)
 
 💡**Ejemplo 2:**  Si \( $A_1 = A_2 = 5{m}^2 $\),  \( $R_1 = R_2 = 1\frac{s}{m^2}$ \),  y  \( $q_i$ \)  es constante, el sistema alcanza un equilibrio donde:
 \( $$q_2 = q_i$$ \).
