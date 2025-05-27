@@ -18,9 +18,13 @@ $G(s) = \frac{Y(s)}{U(s)} = \frac{N(s)}{D(s)}$
 🔑 Polos: Valores de $\( s \)$ que hacen $\( D(s) = 0 \)$. Representan las raíces del denominador y determinan la estabilidad del sistema.  
 🔑 Ceros: Valores de $\( s \)$ que hacen $\( N(s) = 0 \)$. Afectan la respuesta transitoria pero no la estabilidad.
 
+[![aze.png](https://i.postimg.cc/6pp0Mkqb/aze.png)](https://postimg.cc/MvgVTry1)
+
 💡 *Ejemplo 1*: Para $G(s) = \frac{3s-1}{s^2 + 3s + 2}$:  
 - *Cero*: $\( s = \frac{1}{3} \)$.  
 - *Polos*: $\( s = -1 \)$ y $\( s = -2 \)$ (raíces de $\( s^2 + 3s + 2 = 0 \)$.
+
+  [![az.png](https://i.postimg.cc/NfY24RFd/az.png)](https://postimg.cc/bdCvYDQn)
 
 ## 3. Teorema del Valor Final
 
@@ -39,8 +43,10 @@ $\lim_{s \to 0} s \cdot \frac{4}{s(5s+1)} = 4$
 *Definición*:  
 > Cambio abrupto en la entrada desde cero hasta un valor constante A en $t=0$. Modela perturbaciones súbitas o cambios de referencia.
 
+[![es.png](https://i.postimg.cc/Y0xPWQDv/es.png)](https://postimg.cc/5Q6pcQVJ)
+
 *Expresión matemática*:  
-$u(t) = \begin{cases} A & \text{para } t \geq 0 \\ 0 & \text{para } t < 0 \end{cases} \quad \mathcal{L}\{u(t)\} = \frac{A}{s}$
+$ u(t) = \begin{cases} A & \text{para } t \geq 0 \\ 0 & \text{para } t < 0 \end{cases} \quad \mathcal{L}\{u(t)\} = \frac{A}{s} $
 
 *Caso de uso típico*:  
 - Evaluar el tiempo de establecimiento (cuando la salida alcanza el 98% del valor final)
@@ -53,6 +59,8 @@ $Y(s) = \frac{5}{s(s+2)} \quad \Rightarrow \quad y(t) = 2.5(1-e^{-2t}$
 
 *Definición*:  
 > Señal que crece linealmente con el tiempo. Modela referencias que cambian a velocidad constante.
+
+[![rampa.png](https://i.postimg.cc/13yvFgDF/rampa.png)](https://postimg.cc/kBhN3g1M)
 
 *Expresión matemática*:  
 $r(t) = \begin{cases} At & \text{para } t \geq 0 \\ 0 & \text{para } t < 0 \end{cases} \quad \Rightarrow \quad \mathcal{L}\{r(t)\} = \frac{A}{s^2}$
@@ -70,8 +78,10 @@ $\quad \Rightarrow \quad y(t) = \frac{15}{4}(2t-1+e^{-2t})$
 *Definición*:  
 > Señal que varía cuadráticamente con el tiempo. Evalúa sistemas que deben seguir aceleraciones.
 
+[![para.png](https://i.postimg.cc/wTRprGr2/para.png)](https://postimg.cc/F7v8dDNk)
+
 *Expresión matemática*:  
-$$ p(t) = \begin{cases} At^2 & \text{para } t \geq 0 \\ 0 & \text{para } t < 0 \end{cases} \quad \Rightarrow \quad \mathcal{L}\{p(t)\} = \frac{2A}{s^3} $$
+$p(t) = \begin{cases} At^2 & \text{para } t \geq 0 \\ 0 & \text{para } t < 0 \end{cases} \quad \Rightarrow \quad \mathcal{L}\{p(t)\} = \frac{2A}{s^3}$
 
 *Caso de uso típico*:  
 - Sistemas de seguimiento de trayectorias (robótica, misiles)
